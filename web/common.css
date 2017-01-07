@@ -31,6 +31,13 @@ h4{
 	font-size: 14px;
 }
 
+#mapcnt{
+	width: 100%;
+	height: 200px;
+	max-width: 800px;
+	margin: 30px auto;
+}
+
 .form{
 	margin: 20px auto;
 	max-width: 600px;
@@ -57,9 +64,6 @@ form .car_reg{
 	display: inline-block;
 }
 
-
-
 .team{
 	margin:20px auto;
 }
-

@@ -1,0 +1,65 @@
+body{
+	margin:0;
+	padding: 0;
+}
+
+h4{
+	font-weight: bold;
+	font-size:16px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #ececec;
+	margin-bottom: 16px;
+}
+
+.red{
+	color: red;
+}
+
+.container{
+	max-width: 800px;
+}
+
+.footer{
+	margin-top: 20px;
+}
+
+.jumbotron{
+	margin: 20px auto;
+}
+
+.jumbotron p {
+	font-size: 14px;
+}
+
+.form{
+	margin: 20px auto;
+	max-width: 600px;
+	padding: 20px;
+	border: 1px solid #ececec;
+}
+
+form h3{
+	margin: 0 0 20px;
+}
+
+form #carnum{
+	text-transform: uppercase;
+	display: inline-block;
+	width: 360px;
+}
+
+form .car_reg{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	line-height: 20px;
+	padding: 8px 0;
+	width: 60px;
+	display: inline-block;
+}
+
+
+
+.team{
+	margin:20px auto;
+}
+

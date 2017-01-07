@@ -10,28 +10,28 @@ var icon = new AMap.Icon({
 
 var marker1 = new AMap.Marker({
   icon: icon, //24px*24px
-  position: provinces[i].center.split(','),
+  position: [116.439092,39.944305],
   offset: new AMap.Pixel(-12, -12),
   map: mapObj
 });
 
 var marker2 = new AMap.Marker({
   icon: icon, //24px*24px
-  position: provinces[i].center.split(','),
+  position: [116.488552,39.98057],
   offset: new AMap.Pixel(-50, -75),
   map: mapObj
 });
 
 var marker3 = new AMap.Marker({
   icon: icon, //24px*24px
-  position: provinces[i].center.split(','),
+  position: [116.474894,40.012378],
   offset: new AMap.Pixel(-100, -90),
   map: mapObj
 });
 
 var marker4 = new AMap.Marker({
   icon: icon, //24px*24px
-  position: provinces[i].center.split(','),
+  position: [116.460899,39.990007],
   offset: new AMap.Pixel(-12, -123),
   map: mapObj
 });

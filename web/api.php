@@ -1,5 +1,7 @@
 <?php
-
+/* Test:
+ * curl -iv "http://beijingxi.net/api.php?a=reserve" -d "car=1234567&time=noon" 
+ */
 
 $action = $_GET["a"];
 $ret = array("code" => 0);

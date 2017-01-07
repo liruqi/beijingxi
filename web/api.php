@@ -13,10 +13,13 @@ if ($action == "reserve") {
         $json = file_get_contents("/tmp/r.json");
         $obj = json_decode($json, true);
         $obj['car'] = $_POST;
+        setcookie("reserve", json_encode($_POST));
         file_put_contents($dbfile, json_encode($obj));
         echo "OK";
+        header("Location: /ressuc.html"); /* Redirect browser */
         exit(0);
     } else {
         echo "Error: bad car ID format";
+        header("Location: /resfail.html"); /* Redirect browser */
     }
 }

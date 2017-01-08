@@ -6,20 +6,22 @@
 $action = $_GET["a"];
 $ret = array("code" => 0);
 $dbfile = "/tmp/r.json";
+$prod = ! $_GET["debug"];
 if ($action == "reserve") {
-    $car = $_POST["car"];
+    $car_id = $_POST["car_id"];
+    $car_reg = $_POST["car_reg"];
     $time = $_POST["time"];
-    if (strlen($car) == 7) {
+    if (strlen($car_id) == 6) {
         $json = file_get_contents("/tmp/r.json");
         $obj = json_decode($json, true);
-        $obj['car'] = $_POST;
+        $obj[$car_reg . $car_id] = $_POST;
         setcookie("reserve", json_encode($_POST));
         file_put_contents($dbfile, json_encode($obj));
         echo "OK";
-        header("Location: /ressuc.html"); /* Redirect browser */
+        if ($prod) header("Location: /ressuc.html"); /* Redirect browser */
         exit(0);
     } else {
         echo "Error: bad car ID format";
-        header("Location: /resfail.html"); /* Redirect browser */
+        if ($prod) header("Location: /resfail.html"); /* Redirect browser */
     }
 }

@@ -29,7 +29,7 @@
     </div>
 
 
-    <form action="ressuc.html" method="post" class="form">
+    <form action="api.php?a=reserve" method="post" class="form">
       <h3>
         Start Reservation
       </h3>
@@ -37,7 +37,7 @@
       <div class="form-group">
         <label for="carnum">Your Car No.</label>
         <div class="inline">
-          <select class="car_reg">
+          <select class="car_reg" name="car_reg">
             <option>京</option>
             <option>沪</option>
             <option>津</option>
@@ -70,13 +70,13 @@
             <option>琼</option>
             <option>宁</option>
           </select>
-          <input type="text" class="form-control" id="carnum" 
+          <input type="text" class="form-control" id="carnum" name="car_id" 
           placeholder="Car NO." maxlength="6">
         </div>
       </div>
       <div class="form-group">
         <label for="timepicker">Reservation Start Time</label>
-        <input id="timepicker" size="16" type="text" value="" readonly class="form-control">
+        <input id="timepicker" name="time" size="16" type="text" value="" readonly class="form-control">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
 

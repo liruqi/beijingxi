@@ -78,6 +78,10 @@ form .car_reg {
 	margin: 20px 0;
 }
 
+.spots{
+  display: none;
+}
+
 table.lots {
   border-collapse: separate;
   border-spacing: 3px;

@@ -40,13 +40,25 @@ var marker6 = new AMap.Marker({
   clickable: true
 });
 
-var markers = [marker1, marker2, marker3, marker4, marker5, marker6];
+var marker7 = new AMap.Marker({
+  position: [116.381424,39.874488],
+  map: mapObj,
+  clickable: true
+});
+
+var marker8 = new AMap.Marker({
+  position: [116.441677,39.878704],
+  map: mapObj,
+  clickable: true
+});
+
+var markers = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8];
 
 var markClick = function(e){
-  window.location.href="/web/reserve.php";
+  window.location.href="/reserve.php";
 }
 
-for(var i=0;i<6;i++) {
+for(var i=0;i<8;i++) {
   var mark = markers[i];
   mark.on('click',markClick);
 }

@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+<?php
+    $id = $_GET['id'];
+    if (! $id) $id = $_SERVER['REMOTE_ADDR'];
+    $dbfile = "/tmp/map_{$id}.json";
+    $lot = json_decode(file_get_contents($dbfile), true);
+    $map = $lot['map'];
+    $reserves = $lot['reserves'];
+    $cnts = count_chars($map, 1);
+    
+    $left = 123;
+    $cnt = $cnts[ord('E')];
+    header("X-MAP: " + $map);
+    if ($cnt > 0) $left = $cnt; else {
+        var_dump ($cnts);
+    }
+?><!DOCTYPE html>
 <html>
 
 <head>
@@ -37,7 +52,7 @@
         Start Reservation
       </h3>
       <div class="alert alert-success">
-        There are <span class="highlight">123</span> parking spot left.
+        There are <span class="highlight"><?php echo $left; ?></span> parking spot left.
         <a class="cmore">See empty spots!&rarr;</a>
       </div>
       <div class="form-group">

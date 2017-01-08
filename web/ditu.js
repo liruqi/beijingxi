@@ -1,6 +1,6 @@
 var mapObj = new AMap.Map('mapcnt', {
   center: [116.39, 39.9],
-  zoom: 8
+  zoom: 12
 });
 
 var marker1 = new AMap.Marker({

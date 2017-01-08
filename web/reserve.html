@@ -28,12 +28,14 @@
       <h3 class="text-muted">Beijing West Parking Lot</h3>
     </div>
 
-
     <form action="api.php?a=reserve" method="post" class="form">
       <h3>
         Start Reservation
       </h3>
-
+      <div class="alert alert-success">
+        There are <span class="highlight">123</span> parking spot left. 
+        <a href="carpool.html">See empty spots!&rarr;</a> 
+      </div>
       <div class="form-group">
         <label for="carnum">Your Car No.</label>
         <div class="inline">
@@ -79,9 +81,7 @@
         <input id="timepicker" name="time" size="16" type="text" value="" readonly class="form-control">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
-
     </form>
-
   </div>
   <script type="text/javascript">
   $('#timepicker').datetimepicker({

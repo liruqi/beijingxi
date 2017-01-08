@@ -55,7 +55,7 @@ var marker8 = new AMap.Marker({
 var markers = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8];
 
 var markClick = function(e){
-  window.location.href="/reserve.php";
+  window.location.href="/reserve.php?id=bjw";
 }
 
 for(var i=0;i<8;i++) {

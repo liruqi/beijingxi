@@ -5,7 +5,6 @@
 
 $action = $_GET["a"];
 $ret = array("code" => 0);
-$dbfile = "/tmp/r.json";
 $prod = ! $_GET["debug"];
 if ($action == "reserve") {
     $car_id = $_POST["car_id"];
@@ -16,12 +15,22 @@ if ($action == "reserve") {
         $obj = json_decode($json, true);
         $obj[$car_reg . $car_id] = $_POST;
         setcookie("reserve", json_encode($_POST));
+        $dbfile = "/tmp/r.json";
         file_put_contents($dbfile, json_encode($obj));
         echo "OK";
         if ($prod) header("Location: /ressuc.html"); /* Redirect browser */
-        exit(0);
     } else {
         echo "Error: bad car ID format";
         if ($prod) header("Location: /resfail.html"); /* Redirect browser */
     }
+    exit(0);
+} 
+
+if ($action == "synclot") {
+    $id = $_GET['id'];
+    if (! $id) $id = $_SERVER['REMOTE_ADDR'];
+    
+    $dbfile = "/tmp/map_{$id}.json";
+    file_put_contents($dbfile, json_encode($_POST));
+    echo json_encode($_POST);
 }

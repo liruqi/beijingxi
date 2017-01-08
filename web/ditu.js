@@ -48,5 +48,5 @@ var markClick = function(e){
 
 for(var i=0;i<6;i++) {
   var mark = markers[i];
-  mark.click(markClick);
+  mark.on('click',markClick);
 }

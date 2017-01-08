@@ -19,7 +19,7 @@
       <nav>
         <ul class="nav nav-pills pull-right">
           <li role="presentation">
-            <a href="start.html">Home</a>
+            <a href="index.html">Home</a>
           </li>
           <li role="presentation">
             <a href="aboutus.html">About us</a>
